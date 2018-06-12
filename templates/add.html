@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>
+	</title>
+  	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='add.css')}}">
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body>
+	<div class="split left">
+    	<img src="{{url_for('static',filename='img/top.png')}}" alt="Logo" height="100px" width="100px">
+    <div class="centered_l">
+         <img src="{{url_for('static',filename='img/xyz.png')}}" alt="Logo" height="400px" width="400px">
+    </div>   
+  	</div>
+
+  <div class="split right">
+
+    <div class="centered_r">
+      <h1>Add Money</h1>
+		<form action="/add" method="POST">
+			<div class="container">
+
+	 <label for="money"><b>Amount</b></label><br>
+    <input type="number" placeholder="Enter amount" name="money" required><br><br>
+
+	<button type="submit">Submit</button>
+</div>
+</div>
+</div>
+
+</form>
+</body>
+</html>

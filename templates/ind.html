@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 800px; }
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #01B9F5;
+    height: 800px; 
+    }
+    body{
+      font-family: 'Open Sans', sans-serif;
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+
+
+<script>
+window.onload = function () {
+
+//Better to construct options first and then pass it as a parameter
+var options = {
+  title: {
+    text: "Day to Day Banking"              
+  },
+  data: [              
+  {
+    // Change type to "doughnut", "line", "splineArea", etc.
+    type: "column",
+    dataPoints: [
+      { label: "14 Apr",  y: 10  },
+      { label: "15 Apr", y: 15  },
+      { label: "16 Apr", y: 25  },
+      { label: "17 Apr",  y: 30  },
+      { label: "Today",  y: 28  }
+    ]
+  }
+  ]
+};
+
+$("#chartContainer").CanvasJSChart(options);
+}
+</script>
+
+
+
+<body>
+
+
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav hidden-xs">
+      <img src="{{url_for('static',filename='img/top.png')}}" alt="logo" height="100px" width="100px">
+      <ul class="nav nav-pills nav-stacked" style="font-size:25">
+        
+        <li style="color: white;"><h1>Hello {{ name }}</h1></li><br>
+        </ul><br>
+        <img src="{{url_for('static',filename='img/avatar.png')}}" class="img-circle" height="150" width="150" alt="Avatar">
+        <h4 id="mobile_no" style="color: white;padding-left: 20px;"">{{mobile_no}}</h4>
+    </div>
+    <br>
+    
+    <div class="col-sm-9">
+      <div class="col-sm-9">
+        <h1>Welcome to E-Wallet</h1>
+        <h3>Your current Balance is : Rs. {{ money}} </h3>
+      </div>
+       <a href="/addmoney">
+            <div class="col-sm-3">
+            <div class="well">
+              <h4>Add Money</h4>
+              <p>Up to 1 Million</p>
+              <img src="{{url_for('static',filename='img/top.png')}}" alt="something" height="60" width="60"> 
+            </div>
+          </div>
+      </a>
+
+
+
+      <div class="row">
+        <a href="/accept">
+            <div class="col-sm-3">
+            <div class="well">
+              <h4>Accept Money</h4>
+              <p>Up to 1 Million</p>
+              <img src="{{url_for('static',filename='img/top.png')}}" alt="something" height="60" width="60"> 
+            </div>
+          </div>
+      </a>
+      <a href="/recharge">
+        <div class="col-sm-3">
+          <div class="well">
+            <h4>Recharge</h4>
+            <p>Your mobile phone</p> 
+            <img src="{{url_for('static',filename='img/wallet.jpg')}}" alt="something" height="60" width="60"> 
+          </div>
+        </div>
+        </a>
+        <a href="/pay">
+        <div class="col-sm-3">
+          <div class="well">
+            <h4>Pay</h4>
+            <p>to different user</p> 
+            <img src="{{url_for('static',filename='img/pay.png')}}" alt="something" height="60" width="60"> 
+          </div>
+        </div>
+        </a>
+        <a href="/passbook">
+        <div class="col-sm-3">
+          <div class="well">
+            <h4>Passbook</h4>
+            <p>Your complete history</p> 
+            <img src="{{url_for('static',filename='img/book.png')}}" alt="something" height="60" width="60"> 
+          </div>
+        </div>
+        </a>
+
+      </div>
+
+
+      <div class="row">
+        
+        <!-- <div class="col-sm-4">
+          <div class="well">
+            <p>Text</p> 
+            <p>Text</p> 
+            <p>Text</p> 
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="well">
+            <p>Text</p> 
+            <p>Text</p> 
+            <p>Text</p> 
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="well">
+            <p>Text</p> 
+            <p>Text</p> 
+            <p>Text</p> 
+          </div>
+        </div> -->
+
+
+        <div class="col-sm-8">
+        <div id="chartContainer" style="height: 400px; width: 100%;"></div>
+        </div>
+      </div>
+
+
+      <!-- <div class="row">
+        <div class="col-sm-8">
+          <div class="well">
+            <p>Text</p> 
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="well">
+            <p>Text</p> 
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>success</title>
+	<link rel="stylesheet" type="text/css"  href="{{url_for('static',filename='success.css')}}">
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  
+	<a href="/success"><div class="centered_l">
+         <img src="{{url_for('static',filename='img/tick.png')}}" alt="Logo" height="200px" width="200px">
+    </div></a>
+    <div class="jumbotron">
+    	<center>
+    	<h3>You have successfully deposited Rs.{{money}}  in your wallet.</h3>   </center>
+    </div>
+
+</form>
+</body>
+</html>

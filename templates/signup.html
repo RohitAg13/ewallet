@@ -1,0 +1,73 @@
+
+ <html>
+ <head>
+  <title></title>
+  <link rel="stylesheet" type="text/css"  href="{{url_for('static',filename='login.css')}}">
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+</head>
+<body>
+      
+
+  <div class="split left">
+    <img src="{{url_for('static',filename='img/top.png')}}" alt="Logo" height="100px" width="100px">
+    <div class="centered_l">
+        <h2>Benifits of E-wallet</h2>
+        <br><br>
+        <b>
+          <p>Fast & Secure Payments</p>
+        <p>Pay Utility Bills or Mobile Recharge & Get Cashbacks</p>
+        <p>Amazing deals on Travel, Movies & Shopping</p></b>
+    </div>   
+  </div>
+
+  <div class="split right">
+
+    <div class="centered_r">
+      <h1>Sign Up</h1>
+
+
+
+      <!-- <form action="/register" method="POST">
+   <div class="container">
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter name" name="name" required>
+    <label for="mobile_no"><b>Mobile number</b></label>
+    <input type="number" placeholder="Enter mobile number" name="mobile_no" required>
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+    <button type="submit">Sign Up</button> -->
+      <form action="/register" method="POST">
+        <div class="container">
+          <label for="name"><b>Name</b></label>
+          <input type="text" placeholder="Enter name" name="name" required>
+
+          <label for="mobile_no"><b>Phone No.</b></label>
+          <input type="text" placeholder="Enter Phone No." name="mobile_no" required>
+
+           <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+
+          <label for="password"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="password" required>
+
+          <button type="submit">Sign Up</button>
+          
+          </div>
+        </div>   
+      </div>
+
+    </form>
+  </body>
+  </html>
+
+
+
+
+
+
+
+
+
+

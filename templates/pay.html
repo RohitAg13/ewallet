@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>
+	</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='login.css')}}">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+  
+ 
+</head>
+<body>
+	<div class="split left">
+    <img src="{{url_for('static',filename='img/top.png')}}" alt="Logo" height="100px" width="100px">
+    <div class="centered_l">
+         <img src="{{url_for('static',filename='img/paye.png')}}" alt="Logo" height="500px" width="500px">
+    </div>   
+  </div>
+
+  <div class="split right">
+
+    <div class="centered_r">
+	<h1>Pay Money</h1><br>
+	<form action="/payu" method="POST">
+	<div class="container">
+
+	<label for="mobile_no"><b>Mobile number</b></label><br>
+    <input type="number" placeholder="Enter mobile number" name="mobile_no" required><br>
+
+	 <label for="amt"><b>Amount</b></label><br>
+    <input type="number" placeholder="Enter amount" name="amt" required><br>
+   
+	<button type="submit">Submit</button>
+</div>
+</div>
+</div>
+</form>
+</body>
+</html>

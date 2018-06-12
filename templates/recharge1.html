@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recharge table</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
+	<div class="container">
+		<table class="Mobile Reacharge">
+			<tr>
+				<th>Receiver</th>
+				<th>Sender</th>
+				<th>Recharge for Rs</th>
+		</tr>
+		{% for i in items %}
+		<tr>
+			<td>{{i.receiver}}</td>
+			<td>{{i.amt}}</td>
+			<td>{{i.sender}}</td>
+		</tr>
+		{% endfor %}
+		</table>
+	</div>
+</body>
+</html>

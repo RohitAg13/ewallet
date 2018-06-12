@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	 <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='login.css')}}">
+</head>
+<body>
+	<div class="split left">
+    	<img src="{{url_for('static',filename='img/top.png')}}" alt="Logo" height="100px" width="100px">
+    <div class="centered_l">
+         <img src="{{url_for('static',filename='img/car.png')}}" alt="Logo" height="400px" width="400px">
+    </div>   
+  	</div>
+
+  <div class="split right">
+
+    <div class="centered_r">
+	<h1><center>Enter Card Details</center></h1>
+	<form action="card" method="POST">
+		<div class="container">
+		
+		 <label for="cardno"><b>Card Number</b></label><br>
+    	<input type="number" placeholder="Enter card number" name="cardno" required><br><br>
+    	
+    	 <label for="cvv"><b>CVV</b></label><br>
+    	<input type="number" placeholder="Enter CVV" name="cvv" required><br><br>
+    
+    <select>
+			<option value="credit card">Credit Card</option>
+			<option value="debit card">Debit Card</option>
+		</select><br><br>
+    
+    <button type="submit" >Submit</button>
+</div>
+</div>
+</div>
+</form>
+</body>
+</html>
