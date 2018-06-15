@@ -13,8 +13,8 @@ def generateOTP(number):
 
 def sms(message , number):
 
-    username = "9051564898"
-    passwd = "helloworld"
+    username = "Enter the Phone number here"
+    passwd = "Enter your password here"
 
     message = "+".join(message.split(' '))
 
